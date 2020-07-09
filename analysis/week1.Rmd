@@ -15,7 +15,7 @@ output:
 # Agenda
 
 ## Introductions
- - What is your Name, job, one good thing from your morning
+ - What is your Name, job, one good thing from your week
 
 ## Motivation
  - Why are you here? What do you want to get from the group?
