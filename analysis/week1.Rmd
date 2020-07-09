@@ -28,10 +28,10 @@ output:
  - what does your data look like?
  - tell us about a dataset
 
-```{r}
+## My motivation
+ - tools, tools, tools - 30 years of tools
+ - infrastructure - statistics, data manipulation
+ - code based - reproducible results
 
-plot(mtcars)
-
-```
 
 
