@@ -1,0 +1,37 @@
+---
+title:           Week 1
+author:          Dennis Wollersheim
+date:            09.07.2020
+linkcolor:       cyan
+citecolor:       grey
+output:
+  pdf_document:
+    highlight:   zenburn
+---
+
+\tableofcontents
+
+
+# Agenda
+
+## Introductions
+ - What is your Name, job, one good thing from your morning
+
+## Motivation
+ - Why are you here? What do you want to get from the group?
+
+## What is R?
+ - what do do you know about R?
+ - What have you heard about R that makes you want to learn about it?
+
+## Your context
+ - what does your data look like?
+ - tell us about a dataset
+
+```{r}
+
+plot(mtcars)
+
+```
+
+
