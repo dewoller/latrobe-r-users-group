@@ -9,9 +9,6 @@ output:
     highlight:   zenburn
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 ```{r setup1, include=FALSE}
 source('_drake.R')
