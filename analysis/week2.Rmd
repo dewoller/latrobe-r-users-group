@@ -1,0 +1,66 @@
+---
+title:           Week 2
+author:          Dennis Wollersheim
+date:            "`r format(Sys.time(), '%d %B, %Y')`"
+linkcolor:       cyan
+citecolor:       grey
+output:
+  pdf_document:
+    highlight:   zenburn
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r setup1, include=FALSE}
+source('_drake.R')
+```
+
+
+
+\tableofcontents
+
+
+# Agenda
+
+## Introductions
+ - What is your Name, successes with R or data this week
+
+## Challenges
+  - what are your challenges with data this week? This month?  All time?
+
+
+# This week - dealing with big data
+  - structure
+  - reproducible
+  - don't do anything twice
+
+
+# Exploration of the PBS / MBS dataset
+
+ - 10 years of PBS data, 20 years of MBS data
+
+ - ATC drug codes and drug categories also included
+
+```{r}
+loadd( df_pbs )
+
+df_pbs %>%
+  ggplot( aes( supply_date, fill= atc_meaning) ) +
+  geom_bar()
+
+df_pbs %>%
+  mutate( year = year( supply_date) ) %>%
+  ggplot( aes( year, fill= atc_meaning) ) +
+  geom_bar()
+
+df_pbs %>%
+  mutate( year = year( supply_date) ) %>%
+  count( year, atc_meaning) %>%
+  ggplot( aes( x=year, y=n, color= atc_meaning) ) +
+  geom_point() +
+  geom_line()
+
+
+```

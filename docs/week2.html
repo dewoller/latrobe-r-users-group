@@ -12,7 +12,7 @@
 <meta name="author" content="Dennis Wollersheim" />
 
 
-<title>Week 1</title>
+<title>Week 2</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -377,9 +377,9 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Week 1</h1>
+<h1 class="title toc-ignore">Week 2</h1>
 <h4 class="author">Dennis Wollersheim</h4>
-<h4 class="date">09.07.2020</h4>
+<h4 class="date">16 July, 2020</h4>
 
 </div>
 
@@ -404,10 +404,10 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-07-09
+<strong>Last updated:</strong> 2020-07-16
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 5 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 2
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>R_users_group/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -419,7 +419,7 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <hr>
 </div>
 <div id="checks" class="tab-pane fade">
-<div class="panel-group" id="workflowr-checks">
+<div id="workflowr-checks" class="panel-group">
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
@@ -428,53 +428,19 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 </div>
 <div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+<p>The R Markdown is untracked by Git. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongobjectspresent"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>Environment:</strong> objects present </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
 </p>
 </div>
-<div id="strongEnvironmentstrongobjectspresent" class="panel-collapse collapse">
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
 <div class="panel-body">
-
-<p>
-The global environment had objects present when the code in the R Markdown file was run. These objects can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment. Use <code>wflow_publish</code> or <code>wflow_build</code> to ensure that the code is always run in an empty environment.
-</p>
-<p>
-The following objects were defined in the global environment when these results were created:
-</p>
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th style="text-align:left;">
-Name
-</th>
-<th style="text-align:left;">
-Class
-</th>
-<th style="text-align:left;">
-Size
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-wideScreen
-</td>
-<td style="text-align:left;">
-function
-</td>
-<td style="text-align:left;">
-1 Kb
-</td>
-</tr>
-</tbody>
-</table>
+<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
 </div>
 </div>
 </div>
@@ -545,10 +511,24 @@ Note that you need to be careful to ensure that all relevant files for the analy
 </p>
 <pre><code>
 Ignored files:
+    Ignored:    .Rhistory
     Ignored:    .Rproj.user/
+    Ignored:    analysis/figure/
+    Ignored:    analysis/week2.html
+    Ignored:    keys.R
+
+Untracked files:
+    Untracked:  .drake/
+    Untracked:  R/get_pbs_data.R
+    Untracked:  analysis/week2.Rmd
+    Untracked:  doc/
 
 Unstaged changes:
+    Modified:   .gitignore
+    Modified:   R/plan.R
+    Modified:   _drake.R
     Modified:   analysis/week1.Rmd
+    Modified:   packages.R
 
 </code></pre>
 <p>
@@ -561,137 +541,9 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <hr>
 </div>
 <div id="versions" class="tab-pane fade">
-
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/week1.Rmd</code>) and HTML (<code>docs/week1.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+There are no past versions. Publish this analysis with <code>wflow_publish()</code> to start tracking its development.
 </p>
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-File
-</th>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-<th>
-Message
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/dewoller/latrobe-r-users-group/a7d76b73d1705bc9d46330f2c7572086389b8b54/docs/week1.html" target="_blank">a7d76b7</a>
-</td>
-<td>
-Dennis Wollersheim
-</td>
-<td>
-2020-07-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/dewoller/latrobe-r-users-group/blob/8f67d1e1939817538d9ba5ee451e25674b423586/analysis/week1.Rmd" target="_blank">8f67d1e</a>
-</td>
-<td>
-Dennis Wollersheim
-</td>
-<td>
-2020-07-09
-</td>
-<td>
-workflowr::wflow_publish(“analysis/week1.Rmd”)
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/dewoller/latrobe-r-users-group/449a751f6edc61e1f8895f776c06546d25198aad/docs/week1.html" target="_blank">449a751</a>
-</td>
-<td>
-Dennis Wollersheim
-</td>
-<td>
-2020-07-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/dewoller/latrobe-r-users-group/blob/6c8edfdb057d50cb7cb5470011b19710a06acb33/analysis/week1.Rmd" target="_blank">6c8edfd</a>
-</td>
-<td>
-Dennis Wollersheim
-</td>
-<td>
-2020-07-09
-</td>
-<td>
-workflowr::wflow_publish(“analysis/week1.Rmd”)
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/dewoller/latrobe-r-users-group/cb4610b2bada3bd55674ac3258432277fa20e2f8/docs/week1.html" target="_blank">cb4610b</a>
-</td>
-<td>
-Dennis Wollersheim
-</td>
-<td>
-2020-07-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/dewoller/latrobe-r-users-group/blob/9425ca4bde7569e29f8a110cbb5d83b53685b6f3/analysis/week1.Rmd" target="_blank">9425ca4</a>
-</td>
-<td>
-Dennis Wollersheim
-</td>
-<td>
-2020-07-09
-</td>
-<td>
-workflowr::wflow_publish(“analysis/week1.Rmd”)
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 <hr>
 </div>
 </div>
@@ -702,86 +554,32 @@ workflowr::wflow_publish(“analysis/week1.Rmd”)
 <div id="introductions" class="section level2">
 <h2>Introductions</h2>
 <ul>
-<li>What is your Name, job, one good thing from your week</li>
+<li>What is your Name, successes with R or data this week</li>
 </ul>
 </div>
-<div id="motivation" class="section level2">
-<h2>Motivation</h2>
+<div id="challenges" class="section level2">
+<h2>Challenges</h2>
 <ul>
-<li>Why are you here? What do you want to get from the group?</li>
+<li>what are your challenges with data this week? This month? All time?</li>
 </ul>
 </div>
-<div id="what-is-r" class="section level2">
-<h2>What is R?</h2>
+</div>
+<div id="this-week---dealing-with-big-data" class="section level1">
+<h1>This week - dealing with big data</h1>
 <ul>
-<li>what do do you know about R?</li>
-<li>What have you heard about R that makes you want to learn about it?</li>
+<li>structure</li>
+<li>reproducible</li>
+<li>don’t do anything twice</li>
 </ul>
 </div>
-<div id="your-context" class="section level2">
-<h2>Your context</h2>
+<div id="exploration-of-the-pbs-mbs-dataset" class="section level1">
+<h1>Exploration of the PBS / MBS dataset</h1>
 <ul>
-<li>what does your data look like?</li>
-<li>tell us about a dataset</li>
+<li><p>10 years of PBS data, 20 years of MBS data</p></li>
+<li><p>ATC drug codes and drug categories also included</p></li>
 </ul>
-</div>
-<div id="my-motivation" class="section level2">
-<h2>My motivation</h2>
-<ul>
-<li>tools, tools, tools - 30 years of tools</li>
-<li>infrastructure - statistics, data manipulation</li>
-<li>code based - reproducible results</li>
-</ul>
-<pre class="r"><code>plot(mtcars)</code></pre>
-<p><img src="figure/week1.Rmd/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-1-1">
-Past versions of unnamed-chunk-1-1.png
-</button>
-</p>
-<div id="fig-unnamed-chunk-1-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/dewoller/latrobe-r-users-group/blob/449a751f6edc61e1f8895f776c06546d25198aad/docs/figure/week1.Rmd/unnamed-chunk-1-1.png" target="_blank">449a751</a>
-</td>
-<td>
-Dennis Wollersheim
-</td>
-<td>
-2020-07-09
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/dewoller/latrobe-r-users-group/blob/cb4610b2bada3bd55674ac3258432277fa20e2f8/docs/figure/week1.Rmd/unnamed-chunk-1-1.png" target="_blank">cb4610b</a>
-</td>
-<td>
-Dennis Wollersheim
-</td>
-<td>
-2020-07-09
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<pre><code>Warning: position_stack requires non-overlapping x intervals</code></pre>
+<p><img src="figure/week2.Rmd/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /><img src="figure/week2.Rmd/unnamed-chunk-1-2.png" width="672" style="display: block; margin: auto;" /><img src="figure/week2.Rmd/unnamed-chunk-1-3.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -789,7 +587,6 @@ Dennis Wollersheim
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 4.0.2 (2020-06-22)
 Platform: x86_64-pc-linux-gnu (64-bit)
 Running under: Ubuntu 18.04.4 LTS
@@ -799,25 +596,40 @@ BLAS:   /usr/lib/x86_64-linux-gnu/openblas/libblas.so.3
 LAPACK: /usr/lib/x86_64-linux-gnu/libopenblasp-r0.2.20.so
 
 locale:
- [1] LC_CTYPE=en_AU.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_AU.UTF-8        LC_COLLATE=en_AU.UTF-8    
- [5] LC_MONETARY=en_AU.UTF-8    LC_MESSAGES=en_AU.UTF-8   
- [7] LC_PAPER=en_AU.UTF-8       LC_NAME=C                 
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_AU.UTF-8 LC_IDENTIFICATION=C       
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+ [1] tidyselect_1.1.0  rmarkdown_2.1     lubridate_1.7.8   RPostgreSQL_0.6-2
+ [5] DBI_1.1.0         forcats_0.5.0     stringr_1.4.0     dplyr_1.0.0      
+ [9] purrr_0.3.4       readr_1.3.1       tidyr_1.1.0       tibble_3.0.3     
+[13] ggplot2_3.3.0     tidyverse_1.3.0   drake_7.12.1.9000 dotenv_1.0.2     
+[17] conflicted_1.0.4  nvimcom_0.9-99   
+
 loaded via a namespace (and not attached):
- [1] workflowr_1.6.2 Rcpp_1.0.4.6    rprojroot_1.3-2 digest_0.6.25  
- [5] later_1.1.0.1   R6_2.4.1        backports_1.1.8 git2r_0.27.1   
- [9] magrittr_1.5    evaluate_0.14   highr_0.8       stringi_1.4.6  
-[13] rlang_0.4.6     fs_1.4.1        promises_1.1.1  whisker_0.4    
-[17] rmarkdown_2.1   tools_4.0.2     stringr_1.4.0   glue_1.4.1     
-[21] httpuv_1.5.4    xfun_0.14       yaml_2.2.1      compiler_4.0.2 
-[25] htmltools_0.5.0 knitr_1.28     </code></pre>
-</div>
+ [1] Rcpp_1.0.5        txtq_0.2.0        lattice_0.20-41   prettyunits_1.1.1
+ [5] assertthat_0.2.1  rprojroot_1.3-2   digest_0.6.25     cellranger_1.1.0 
+ [9] R6_2.4.1          backports_1.1.8   reprex_0.3.0      evaluate_0.14    
+[13] httr_1.4.1        pillar_1.4.6      rlang_0.4.7       progress_1.2.2   
+[17] readxl_1.3.1      rstudioapi_0.11   labeling_0.3      igraph_1.2.5     
+[21] munsell_0.5.0     broom_0.5.6       compiler_4.0.2    httpuv_1.5.4     
+[25] modelr_0.1.7      xfun_0.14         pkgconfig_2.0.3   htmltools_0.5.0  
+[29] workflowr_1.6.2   fansi_0.4.1       withr_2.2.0       crayon_1.3.4     
+[33] dbplyr_1.4.3      later_1.1.0.1     grid_4.0.2        nlme_3.1-147     
+[37] jsonlite_1.7.0    gtable_0.3.0      lifecycle_0.2.0   git2r_0.27.1     
+[41] magrittr_1.5      storr_1.2.1       scales_1.1.1      cli_2.0.2        
+[45] stringi_1.4.6     farver_2.0.3      fs_1.4.1          promises_1.1.1   
+[49] xml2_1.3.2        ellipsis_0.3.1    filelock_1.0.2    generics_0.0.2   
+[53] vctrs_0.3.2       tools_4.0.2       glue_1.4.1        hms_0.5.3        
+[57] parallel_4.0.2    yaml_2.2.1        colorspace_1.4-1  rvest_0.3.5      
+[61] base64url_1.4     memoise_1.1.0     knitr_1.28        haven_2.2.0      </code></pre>
 </div>
 </div>
 
