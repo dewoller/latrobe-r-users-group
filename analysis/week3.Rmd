@@ -1,0 +1,92 @@
+---
+title:           Week 3 - R tutorial
+author:          Dennis Wollersheim
+date:            "`r format(Sys.time(), '%d %B, %Y')`"
+linkcolor:       cyan
+citecolor:       grey
+output:
+  pdf_document:
+    highlight:   zenburn
+---
+
+
+
+```{r setup1, include=FALSE}
+source('_drake.R')
+```
+
+
+
+\tableofcontents
+
+
+# Agenda
+
+## Introductions
+ - What is your Name, successes with R or data this week
+
+
+# This week - the basics (and reading in multiple excel files)
+
+ - Don't do anything by hand
+
+
+```{r}
+library(tidyverse)
+library(readxl)
+
+
+base_path = '/home/dewoller/mydoc/teaching/hid/students/'
+args = list.files(path= base_path, pattern='.*xls', full.names=TRUE)
+
+
+args %>%
+  enframe(name=NULL, value="name") %>%
+  group_by(name) %>%
+  summarise( sheet = excel_sheets( name ), .groups='keep' ) %>%
+  mutate( time = map2_chr( name, sheet, function(name, sheet) {read_excel(name, sheet=sheet) %>% pluck(2,1)} )) %>%
+  mutate( nrow = map2_int( name, sheet, function(name, sheet) {read_excel(name, sheet=sheet, skip=5) %>% nrow()} )) %>%
+  filter(nrow>0) %>%
+  mutate( students = map2( name, sheet, function(name, sheet) {read_excel(name, sheet=sheet, skip=5) %>% select(1:3) } )) %>% 
+  unnest(students) %>%
+  ungroup() %>%
+  select(-name, -sheet, -nrow) %>%
+  distinct() %>% 
+  { . } -> df_allocation
+
+
+df_allocation %>%
+  count( time) %>% 
+  { . } -> times
+
+read_csv(paste0(base_path, '2020_HIM3HIBHIM5IHB_Grades_20200720_0304_comma_separated.csv')) %>%
+  janitor::clean_names() %>% 
+  mutate( student_code = as.character( la_trobe_student_id)) %>%
+  { . } -> addresses
+
+df_allocation %>%
+  distinct( student_code) %>%
+  anti_join( addresses)
+
+addresses %>%
+  distinct( student_code) %>%
+  anti_join( df_allocation )
+
+extras = tribble( ~email,'E.Barker@latrobe.edu.au','a.nexhip@latrobe.edu.au')
+
+if( FALSE) {
+
+  df_allocation %>%
+  left_join( addresses  ) %>%
+  filter(time == times %>% pluck('time',2 )) %>%
+  mutate( email = glue::glue("{student_code}@students.latrobe.edu.au;") ) %>%
+  select(email) %>%
+  bind_rows(extras) %>%
+  pluck('email') %>%  
+  clipr::write_clip()
+
+}
+
+
+
+```
