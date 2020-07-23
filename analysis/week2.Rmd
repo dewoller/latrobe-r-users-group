@@ -10,6 +10,7 @@ output:
 ---
 
 
+
 ```{r setup1, include=FALSE}
 source('_drake.R')
 ```
@@ -47,15 +48,21 @@ df_pbs %>%
   ggplot( aes( supply_date, fill= atc_meaning) ) +
   geom_bar()
 
+```
+
+##  next graph
+
+
+```{r}
+
 df_pbs %>%
   mutate( year = year( supply_date) ) %>%
   ggplot( aes( year, fill= atc_meaning) ) +
   geom_bar()
 
 df_pbs %>%
-  mutate( year = year( supply_date) ) %>%
-  count( year, atc_meaning) %>%
-  ggplot( aes( x=year, y=n, color= atc_meaning) ) +
+  count( yob, atc_meaning) %>%
+  ggplot( aes( x=yob, y=n, color= atc_meaning) ) +
   geom_point() +
   geom_line()
 
