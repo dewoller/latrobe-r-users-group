@@ -13,6 +13,7 @@ This is a website for La Trobe R user's group
 #  Weekly Tutorials
 - [Week 1](week1.html)
 - [Week 2](week2.html)
+- [Week 3](week3.html)
 
 # R and markdown code used to generate this entire site
 [Code for the entire tutorial](http://github.com/dewoller/latrobe-r-users-group)
